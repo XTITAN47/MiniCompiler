@@ -17,7 +17,7 @@ SYSTEM_PROMPT = (
 
 class LLMGenerator:
     def __init__(self, api_key: Optional[str] = None, model: str = "gpt-4o-mini") -> None:
-        self.api_key = api_key or os.getenv("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")
+        self.api_key = api_key or os.getenv("OPENAI_API_KEY")
         self.model = model
         self.client = None
         if OpenAI and self.api_key:
